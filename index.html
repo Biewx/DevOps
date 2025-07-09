@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DevOps - Guia Completo</title>
+  <link rel="stylesheet" href="app.css" />
+</head>
+<body>
+  <header>
+    <h1>DevOps: Conceitos, Ferramentas e Boas Práticas</h1>
+  </header>
+
+  <nav>
+    <button onclick="showSection('devops')">O que é DevOps</button>
+    <button onclick="showSection('beneficios')">Benefícios</button>
+    <button onclick="showSection('ci_cd')">CI/CD</button>
+    <button onclick="showSection('iac')">Infraestrutura como Código</button>
+    <button onclick="showSection('ferramentas')">Ferramentas</button>
+    <button onclick="showSection('monitoramento')">Automação e Monitoramento</button>
+    <button onclick="showSection('cultura')">Cultura e Mindset</button>
+    <button onclick="showSection('referencias')">Referências</button>
+  </nav>
+
+  <div class="container">
+    <section id="devops" class="active">
+      <h2>Introdução ao DevOps</h2>
+    <p> O DevOps surge como resposta à
+      necessidade de integração entre as equipes de desenvolvimento (Dev) e operações (Ops). Trata-se de uma
+      abordagem que visa eliminar barreiras entre essas áreas para aumentar a eficiência, a colaboração e a
+      velocidade das entregas de software. </p>
+    <h2>O que é DevOps?</h2>
+    <p> DevOps é a combinação de
+      filosofias culturais, práticas e ferramentas que aumentam a capacidade de uma empresa de distribuir
+      aplicativos e serviços em alta velocidade. O objetivo é otimizar produtos continuamente, com mais agilidade
+      do que os modelos tradicionais de desenvolvimento de software e gestão de infraestrutura. </p>
+    <p> Em
+      vez de equipes isoladas, o DevOps promove a união de desenvolvedores, profissionais de operações, segurança
+      e controle de qualidade, permitindo que todos atuem ao longo de todo o ciclo de vida do software — desde o
+      desenvolvimento até a implantação e manutenção. </p>
+    <h2>Como funciona o DevOps</h2>
+    <p> Com DevOps, as equipes passam a compartilhar responsabilidades,
+      conhecimentos e fluxos de trabalho. O ciclo de vida do software é integrado: os profissionais acompanham o
+      projeto desde o planejamento até o monitoramento em produção. Esse modelo favorece a entrega contínua e o
+      aprendizado constante. </p>
+    <h2>Práticas essenciais do DevOps</h2>
+    <ul>
+      <li><strong>Integração Contínua (CI):</strong> desenvolvedores
+        integram frequentemente o código em repositórios compartilhados, onde testes automatizados validam as
+        mudanças.</li>
+      <li><strong>Entrega Contínua (CD):</strong> automatiza o envio de alterações para
+        ambientes de teste ou produção, garantindo implantações rápidas e seguras.</li>
+      <li>
+        <strong>Microsserviços:</strong> separação de sistemas em serviços menores e independentes, facilitando
+        a escalabilidade e manutenção.
+      </li>
+      <li><strong>Infraestrutura como Código (IaC):</strong> permite
+        configurar e provisionar ambientes de forma automatizada, versionada e repetível.</li>
+      <li>
+        <strong>Gerenciamento de Configuração:</strong>
+        controle padronizado de mudanças em sistemas
+        operacionais e aplicações.
+      </li>
+      <li><strong>Política como Código:</strong> define regras de
+        conformidade e segurança através de código, garantindo aplicação automática em todos os ambientes.</li>
+      <li><strong>Monitoramento e Log:</strong> coleta de métricas e análise de logs em tempo real para garantir
+        performance e detectar falhas rapidamente.</li>
+      <li><strong>Comunicação e Colaboração:</strong>
+        integração entre times, uso de ferramentas de comunicação e acompanhamento de projetos que reforçam a
+        cultura colaborativa.</li>
+    </ul>
+    </section>
+
+    <section id="beneficios">
+      <h2>Benefícios do DevOps</h2>
+    <p><strong>Velocidade:</strong> Com equipes colaborativas e processos automatizados, as organizações conseguem
+      entregar soluções com maior rapidez, se adaptando com agilidade a mudanças do mercado e necessidades dos
+      usuários.</p>
+    <p><strong>Entrega contínua:</strong> O modelo permite lançar novas funcionalidades e correções com frequência
+      e segurança, melhorando a experiência do usuário e reduzindo o tempo entre o desenvolvimento e a entrega.
+    </p>
+
+    <p><strong>Escalabilidade:</strong> Práticas como a infraestrutura como código tornam o gerenciamento de
+      ambientes mais eficiente, possibilitando que empresas lidem com sistemas complexos com menor risco.</p>
+    <p><strong>Colaboração:</strong> O modelo DevOps promove uma cultura de responsabilidade compartilhada,
+      comunicação constante e eliminação de silos organizacionais.</p>
+    <p><strong>Segurança:</strong> Técnicas como política como código e controles automatizados asseguram
+      conformidade mesmo em ambientes ágeis e dinâmicos.</p>
+    <p> Além desses pontos, o DevOps contribui diretamente para a maturidade digital das organizações,
+      permitindo que as equipes respondam mais rapidamente a incidentes, aprendam com falhas e mantenham um ciclo
+      de inovação contínuo. Isso resulta em produtos mais robustos, clientes mais satisfeitos e operações mais
+      eficientes. </p>
+    </section>
+
+    <section id="ci_cd">
+      <h2>CI/CD - Integração e Entrega Contínua</h2>
+
+    <p>
+      <strong>Integração Contínua (CI)</strong> e <strong>Entrega Contínua (CD)</strong> são práticas importantes no
+      desenvolvimento moderno de software que ajudam as equipes a entregarem código de forma rápida, segura e eficiente.
+    </p>
+
+    <p>
+      <strong>Integração Contínua (CI)</strong> é a prática de juntar frequentemente o código desenvolvido por vários
+      programadores em um único repositório compartilhado. Cada vez que um código novo é enviado, o sistema executa
+      automaticamente testes e verifica se o software compila corretamente. Isso ajuda a identificar erros logo no
+      início, evitando que problemas se acumulem e fiquem difíceis de resolver.
+    </p>
+
+    <p>
+      Além disso, a CI promove colaboração entre os desenvolvedores, pois eles trabalham com versões atualizadas do
+      código.
+    </p>
+
+    <p>
+      <strong>Entrega Contínua (CD)</strong> é o processo que leva esse código testado e pronto para ser colocado em
+      produção ou em ambientes de testes de forma automatizada. Com a entrega contínua, as mudanças no software podem
+      ser disponibilizadas rapidamente para usuários finais ou para testes mais amplos, garantindo que novas
+      funcionalidades ou correções sejam entregues com segurança e confiança.
+    </p>
+
+    <p>
+      Essas práticas reduzem o tempo entre codificar e entregar uma nova funcionalidade, além de tornar as implantações
+      mais confiáveis e frequentes.
+    </p>
+    </section>
+
+    <section id="iac">
+      <h2>Infraestrutura como Código (IaC)</h2>
+
+    <p>
+      Infraestrutura como Código (IaC) é uma prática essencial do DevOps que consiste em provisionar e gerenciar a
+      infraestrutura de TI (servidores, redes, storage, etc.) por meio de arquivos de configuração versionáveis, da
+      mesma forma que o código-fonte de uma aplicação.
+    </p>
+
+    <p>
+      Com IaC, toda a infraestrutura é descrita em arquivos de texto — geralmente em formatos como YAML, JSON ou HCL (no
+      caso do Terraform). Esses arquivos podem ser versionados com Git, revisados por pares, e usados para recriar
+      ambientes de maneira rápida, padronizada e sem intervenção manual.
+    </p>
+
+    <p>
+      Isso elimina a necessidade de configurar servidores "na mão", reduz falhas humanas, melhora a consistência entre
+      ambientes (desenvolvimento, testes, produção) e permite automações poderosas.
+    </p>
+
+    <p>
+      Existem duas abordagens principais:
+    </p>
+
+    <ul>
+      <li><strong>IaC Declarativa:</strong> você define o estado desejado da infraestrutura (ex: "quero 3 instâncias EC2
+        rodando") e a ferramenta faz o necessário para chegar nesse estado (ex: Terraform, CloudFormation).</li>
+      <li><strong>IaC Imperativa:</strong> você define passo a passo como configurar os recursos (ex: "crie isso, depois
+        aquilo") — como é o caso do Ansible ou Shell Script puro.</li>
+    </ul>
+
+    <p>
+      <strong>Exemplo real:</strong> Um time pode criar um arquivo Terraform com a infraestrutura de um site
+      (servidores, banco de dados, firewall) e usar esse mesmo arquivo para criar novos ambientes em minutos, seja
+      localmente ou na nuvem.
+    </p>
+
+    <p>
+      Ferramentas populares de IaC:
+    </p>
+
+    <ul>
+      <li><strong>Terraform:</strong> provisionamento de recursos em várias nuvens (multi-cloud).</li>
+      <li><strong>AWS CloudFormation:</strong> IaC nativa da Amazon Web Services.</li>
+      <li><strong>Ansible:</strong> automação e configuração baseada em YAML (muito usado com Linux).</li>
+      <li><strong>Pulumi:</strong> permite usar linguagens de programação reais (TypeScript, Python) para definir
+        infraestrutura.</li>
+    </ul>
+
+    <p>
+      Ao tratar a infraestrutura como código, os times ganham velocidade, controle de mudanças e a capacidade de escalar
+      sistemas de forma mais segura e previsível.
+    </p>
+    </section>
+
+    <section id="ferramentas">
+      <h2>Principais Ferramentas DevOps</h2>
+    <ul>
+      <p><strong>Jenkins:</strong> Ferramenta de integração contínua. Automatiza processos como testes, builds e deploys
+        sempre que há uma mudança no código. (CI).</p>
+      <p><strong>Docker:</strong> Plataforma de containers. Empacota a aplicação com todas as suas dependências,
+        garantindo que funcione em qualquer ambiente.</p>
+      <p><strong>Git:</strong> versionamento de código-fonte. Permite rastrear mudanças no código, trabalhar em
+        equipe
+        e reverter versões com segurança.</p>
+      <p><strong>Terraform:</strong> Ferramenta de "Infraestrutura como Código" (IaC). Permite criar, atualizar e
+        versionar infraestrutura em nuvem (como servidores, redes, bancos de dados) com código.</p>
+      <p><strong>Prometheus & Grafana:</strong> Sistema de monitoramento e coleta de métricas. Ele coleta métricas
+        periodicamente de aplicações, bancos de dados, containers, etc., através de endpoints HTTP (como /metrics).
+      </p>
+    </ul>
+
+    </section>
+
+    <section id="monitoramento">
+      <h2>Automação, Monitoramento e Feedback Contínuo</h2>
+    <p>
+      No contexto DevOps, automação, monitoramento e feedback contínuo são pilares essenciais para garantir entregas de
+      software rápidas, confiáveis e de alta qualidade.
+    </p>
+    <p>
+      <strong>Automação</strong> elimina tarefas manuais repetitivas, como testes, builds e deploys, utilizando
+      ferramentas de CI/CD e Infraestrutura como Código (IaC).
+    </p>
+    <p>
+      <strong>Monitoramento</strong> permite acompanhar a saúde e o desempenho de sistemas em tempo real, detectando
+      falhas e coletando métricas para tomada de decisão.
+    </p>
+    <p>
+      <strong>Feedback contínuo</strong> fornece dados constantes (de testes, usuários ou sistemas) que ajudam a
+      identificar problemas rapidamente e melhorar continuamente o software.
+    </p>
+    <p>
+      Esses três elementos trabalham em conjunto para criar um ciclo de desenvolvimento mais ágil, seguro e centrado na
+      melhoria contínua, sendo fundamentais para o sucesso de uma cultura DevOps.
+    </p>
+  </section>
+
+    <section id="cultura">
+      <h2>Cultura Colaborativa e Mindset Ágil</h2>
+    <p>
+      <strong>Cultura colaborativa</strong> em DevOps significa que equipes de desenvolvimento, operações, segurança e
+      outras áreas trabalham juntas com objetivos compartilhados, comunicação aberta e responsabilidade coletiva.
+    </p>
+    <p>
+      <strong>Mindset Ágil</strong> é uma forma de pensar baseada nos princípios do Ágil: foco em entregas rápidas,
+      feedback contínuo, adaptação às mudanças e melhoria constante.
+    </p>
+    <p>
+      Juntos, esses dois conceitos criam um ambiente onde pessoas, processos e tecnologia estão alinhados para entregar
+      software com mais agilidade, qualidade e colaboração.
+    </p>
+    </section>
+
+    <section id="referencias">
+      <h2>Referências</h2>
+      <ul>
+        <li><a href="https://aws.amazon.com/devops/" target="_blank">AWS - DevOps</a></li>
+        <li><a href="https://learn.microsoft.com/" target="_blank">Microsoft Learn</a></li>
+        <li><a href="https://www.redhat.com/pt-br/topics/devops" target="_blank">Red Hat - DevOps</a></li>
+        <li><a href="https://www.atlassian.com/devops" target="_blank">Atlassian - DevOps</a></li>
+        <li><a href="https://kubernetes.io/" target="_blank">Kubernetes</a></li>
+        <li><a href="https://www.terraform.io/" target="_blank">Terraform</a></li>
+      </ul>
+    </section>
+  </div>
+
+  <footer>
+    <p>Material Didático Interativo - DevOps © 2025</p>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
